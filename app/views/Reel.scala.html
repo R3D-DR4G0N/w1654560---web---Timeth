@@ -1,0 +1,218 @@
+@()<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+
+            <!-- disable zooming -->
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=0" />
+
+        <title>Slot Machine</title>
+
+        <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/style.css" )" media="screen" />
+
+
+        <style media="screen">
+                .container {
+                    width: 210px;
+                    height: 140px;
+                    position: relative;
+                    margin-top: 51px;
+                    margin-left: -5px;
+                    border: 1px solid #CCC;
+                    perspective: 1100px;
+                }
+
+
+                #carousel {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    transform-style: preserve-3d;
+                }
+
+                .ready #carousel {
+                    transition: transform 1s;
+                }
+
+                #carousel.panels-backface-invisible figure {
+                    backface-visibility: hidden;
+                }
+
+                #carousel figure {
+                    display: block;
+                    position: absolute;
+                    width: 186px;
+                    height: 116px;
+                    left: 10px;
+                    top: 10px;
+
+                    line-height: 116px;
+                    font-size: 80px;
+                    font-weight: bold;
+                    color: white;
+                    text-align: center;
+                }
+
+                .ready #carousel figure {
+                    transition: opacity 1s, transform 1s;
+                }
+
+                #carousel1 {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    transform-style: preserve-3d;
+                }
+
+                .ready #carousel1 {
+                    transition: transform 1s;
+                }
+
+                #carousel1.panels-backface-invisible figure {
+                    backface-visibility: hidden;
+                }
+
+                #carousel1 figure {
+                    display: block;
+                    position: absolute;
+                    width: 186px;
+                    height: 116px;
+                    left: 10px;
+                    top: 10px;
+
+                    line-height: 116px;
+                    font-size: 80px;
+                    font-weight: bold;
+                    color: white;
+                    text-align: center;
+                }
+
+                .ready #carousel1 figure {
+                    transition: opacity 1s, transform 1s;
+                }
+
+                #carousel2 {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    transform-style: preserve-3d;
+                }
+
+                .ready #carousel2 {
+                    transition: transform 1s;
+                }
+
+                #carousel2.panels-backface-invisible figure {
+                    backface-visibility: hidden;
+                }
+
+                #carousel2 figure {
+                    display: block;
+                    position: absolute;
+                    width: 186px;
+                    height: 116px;
+                    left: 10px;
+                    top: 10px;
+
+                    line-height: 116px;
+                    font-size: 80px;
+                    font-weight: bold;
+                    color: white;
+                    text-align: center;
+                }
+
+                .ready #carousel2 figure {
+                    transition: opacity 1s, transform 1s;
+                }
+        </style>
+
+    </head>
+
+    <body>
+        <div class="Main_Wrap">
+            <div class="titleWrap">
+                <div class="title">
+                    Slot Machine
+                </div>
+            </div>
+            <div class="wrapper">
+
+                <div class="creditsWrap">
+                    <div class="text"> Credits</div>
+                    <div class="credText text" id="cred"> 10 </div>
+                    <div class="btn" id="addCoins">Add Credits</div>
+                    <div class="btn" id="reset">Reset</div>
+
+                </div>
+
+                <div class="slotWrap">
+
+                    <div class="reel" id="reel01">
+                        <section class="container">
+                            <div class="spinner" id="carousel">
+                                <figure><img class="img" src="@routes.Assets.versioned("images/lemon.png")" /></figure>
+                                <figure><img class="img" src="@routes.Assets.versioned("images/plum.png")" /></figure>
+                                <figure><img class="img" src="@routes.Assets.versioned("images/watermelon.png")" /></figure>
+                                <figure><img class="img" src="@routes.Assets.versioned("images/bell.png")" /></figure>
+                                <figure><img class="img" src="@routes.Assets.versioned("images/redseven.png")" /></figure>
+                                <figure><img class="img" src="@routes.Assets.versioned("images/cherry.png")" /></figure>
+
+                            </div>
+                        </section>
+                    </div>
+                    <div class="reel" id="reel02">
+                        <section class="container">
+                            <div class="spinner" id="carousel1">
+                                <figure><img class="img" src="@routes.Assets.versioned("images/lemon.png")" /></figure>
+                                <figure><img class="img" src="@routes.Assets.versioned("images/plum.png")" /></figure>
+                                <figure><img class="img" src="@routes.Assets.versioned("images/watermelon.png")" /></figure>
+                                <figure><img class="img" src="@routes.Assets.versioned("images/bell.png")" /></figure>
+                                <figure><img class="img" src="@routes.Assets.versioned("images/redseven.png")" /></figure>
+                                <figure><img class="img" src="@routes.Assets.versioned("images/cherry.png")" /></figure>
+
+                            </div>
+                        </section>
+                    </div>
+                    <div class="reel" id="reel03">
+                        <section class="container">
+                            <div class="spinner" id="carousel2">
+                                <figure><img class="img" src="@routes.Assets.versioned("images/lemon.png")" /></figure>
+                                <figure><img class="img" src="@routes.Assets.versioned("images/plum.png")" /></figure>
+                                <figure><img class="img" src="@routes.Assets.versioned("images/watermelon.png")" /></figure>
+                                <figure><img class="img" src="@routes.Assets.versioned("images/bell.png")" /></figure>
+                                <figure><img class="img" src="@routes.Assets.versioned("images/redseven.png")" /></figure>
+                                <figure><img class="img" src="@routes.Assets.versioned("images/cherry.png")" /></figure>
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="betWrap">
+                    <div class="text">Bet</div>
+                    <div class="betText text" id="bet"> 0 </div>
+                    <div class="btn" id="betone">Bet One</div>
+                    <div class="btn" id="betmax">Bet Max</div>
+                </div>
+            </div>
+            <br/>
+            <div class="spin">
+                <div class="btnSpin text" id="spinbtn">Spin</div>
+            </div>
+            <div class="btn" id="signOut">Sign Out</div>
+            <div class="btn" id="stats">Statistics</div>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+        <script src="@routes.Assets.versioned("javascripts/utils.js")"></script>
+        <script src="@routes.Assets.versioned("javascripts/reel.js")" ></script>
+        <br/>
+        <br/>
+        <footer>
+            <p>Designed and developed by <b>Timeth Subasinghe</b></p>
+            <p>UoW ID : w1654560 IIT ID : 2016384</p>
+            <p></p>
+        </footer>
+
+
+    </body>
+
+</html>
